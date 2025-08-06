@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h> // for boolean data type
+#include<string.h>
 
 int main()
 {
@@ -53,7 +54,7 @@ int main()
     // Array of Char - String
     char name[] = "Rakesh Chilukala";
     char food[] = "Biryani";
-    char email = "demo@gmail.com";
+    char email[] = "demo@gmail.com";
 
     printf("Hello Mr.%s\n", name);
     printf("My fav food is %s\n", food);
@@ -81,6 +82,95 @@ int main()
     }else{
         printf("You are Guest!");
     }
+
+    // Variables done
+
+    // Format Specifiers - Combination of % symbol,letter,numbers and optional modifiers
+    char user[] = "Rocky";
+    printf("%s",user);
+
+    // width
+    int num1 = 1;
+    int num2 = 10;
+    int num3 = -100;
+    float num4 = 5.99;
+
+    printf("%-4d",num1);
+    printf("%-4d",num2);
+    printf("%-4d",num3);
+
+    // Precision
+    printf("%.2f",num4);
+
+
+// Arthematic Operations - +,-,=,+=,-=,*,/,%
+    int x = 10;
+    int y = 20;
+    int z = 30;
+    int m=0;
+
+    m = x+y;
+
+    printf("Sum of x and y = \n",m);
+
+
+// User Input
+
+    // Default values store
+    // int age;
+    // float gpa;
+    // char grade;
+    // char name[30];
+
+    // Adding empty data
+    int Age = 0;
+    float Gpa =0.0f;
+    char Grade = '\0';
+    char Name[30]="";
+
+    printf("%d",Age);
+    printf("%f",Gpa);
+    printf("%d",Grade);
+    printf("%s",Name);
+
+
+    // User Input - scanf()
+    printf("\n Enter your Age: ");
+    scanf(" %d",&Age);
+    printf("Your age is %d",Age);
+
+    printf("Enter Your GPA: ");
+    scanf("%f",&Gpa);
+    printf("GPA: %f",Gpa);
+
+    printf("Enter your grade:");
+    scanf("%c",&Grade);
+    printf("Grade : %c",Grade);
+
+    getchar();
+    printf("Enter your frist name: ");
+    scanf("%s",&Name);
+    printf("first Name: %s",Name);
+
+    printf("Enter you Full Name ");
+    fgets(Name,sizeof(Name),stdin);
+    printf("Your Full Name is %s",Name);
+    
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+    
+
 
     return 0;
 }
